@@ -1,6 +1,0 @@
-{
-  "buildCommand": "npm run build && npm --prefix server install",
-  "outputDirectory": "dist",
-  "framework": "vite",
-  "regions": ["iad1"]
-}
