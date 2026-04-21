@@ -4,7 +4,6 @@
   "engines": {
     "node": "22.x"
   },
-  "type": "module",
   "scripts": {
     "start": "npm run server:start",
     "dev": "concurrently -k --names client,server --prefix-colors cyan,green \"npm run dev:client\" \"npm run dev:server\"",
