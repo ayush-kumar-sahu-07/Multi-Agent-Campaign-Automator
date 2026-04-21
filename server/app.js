@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import session from 'express-session'
+import MongoStore from 'connect-mongo'
 import workflowRouter from './routes/workflow.js'
 import authRouter from './routes/auth.js'
 import campaignHistoryRouter from './routes/campaignHistory.js'
@@ -66,16 +67,17 @@ app.use((err, _req, res, next) => {
 
 app.use(
   session({
-    name: 'connect.sid',
-    secret: sessionSecret,
+    secret: process.env.SESSION_SECRET || sessionSecret,
     resave: false,
     saveUninitialized: false,
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGODB_URI
+    }),
     cookie: {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
-      maxAge: 1000 * 60 * 60 * 24, // 24 hours
-      domain: process.env.NODE_ENV === 'production' ? undefined : 'localhost'
+      maxAge: 1000 * 60 * 60 * 24
     }
   })
 )
