@@ -28,6 +28,7 @@
     "framer-motion": "^12.23.25",
     "jspdf": "^4.2.1",
     "lucide-react": "^0.556.0",
+    "mongodb-memory-server": "^11.0.1",
     "mongoose": "^9.5.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
