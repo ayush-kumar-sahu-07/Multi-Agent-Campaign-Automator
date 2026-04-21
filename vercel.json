@@ -2,11 +2,5 @@
   "buildCommand": "npm run build && npm --prefix server install",
   "outputDirectory": "dist",
   "framework": "vite",
-  "regions": ["iad1"],
-  "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 30
-    }
-  }
+  "regions": ["iad1"]
 }
