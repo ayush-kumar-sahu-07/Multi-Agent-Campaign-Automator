@@ -12,7 +12,6 @@
     "CLIENT_ORIGIN",
     "NODE_ENV"
   ],
-  "envPrefix": ["VITE_", "NEXT_PUBLIC_"],
   "regions": ["iad1"],
   "functions": {
     "server/**": {
