@@ -2,16 +2,6 @@
   "buildCommand": "npm run build && npm --prefix server install",
   "outputDirectory": "dist",
   "framework": "vite",
-  "env": [
-    "VITE_API_BASE_URL",
-    "MONGODB_URI",
-    "SESSION_SECRET",
-    "AI_PROVIDER",
-    "AI_API_KEY",
-    "AI_MODEL",
-    "CLIENT_ORIGIN",
-    "NODE_ENV"
-  ],
   "regions": ["iad1"],
   "functions": {
     "server/**": {
