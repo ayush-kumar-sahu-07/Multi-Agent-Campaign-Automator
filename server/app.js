@@ -19,10 +19,7 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
-  cookie: {
-    secure: true,
-    sameSite: "none"
-  }
+  
 }));
 
 // DB connect
