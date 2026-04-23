@@ -5,7 +5,7 @@ import { validateEnvironment } from './utils/validateEnv.js'
 
 dotenv.config()
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 10000
 const aiProvider = process.env.AI_PROVIDER || 'openrouter'
 const aiModel = process.env.AI_MODEL || ''
 const hasApiKey = Boolean(process.env.AI_API_KEY)
