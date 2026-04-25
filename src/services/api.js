@@ -1,9 +1,9 @@
 const API_BASE = (() => {
   const base = import.meta.env.VITE_API_BASE_URL || '';
-  const cleaned = base.replace(/\/$/, '');
+  const cleaned = base.replace(/\/$/, '').replace(/\/api$/, '');
 
   if (!cleaned) {
-    throw new Error("VITE_API_BASE_URL is not set");
+    console.warn('VITE_API_BASE_URL is not set. Falling back to same-origin /api requests.');
   }
 
   return cleaned;
